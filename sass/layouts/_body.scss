@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -18,6 +22,7 @@ body {
   margin: 0;
   line-height: 1;
   font-family: 'Open Sans';
+  overflow-x: hidden;
 
   &:before {
     content: '';

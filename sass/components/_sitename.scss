@@ -7,11 +7,12 @@
   align-items: center;
   flex-direction: column;
   max-width: $sitename-max-width;
-  margin: 0 auto;
   flex: 0;
-  margin: auto;
   @include breakpoint($sitename-max-width) {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 
   &__name {
@@ -21,9 +22,6 @@
     background: black;
     position: relative;
     margin: 0;
-    @include breakpoint($sitename-max-width) {
-      margin-left: 10vw;
-    }
   }
 
   &__slogan {
