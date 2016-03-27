@@ -33,7 +33,7 @@ gulp.task('sass', function() {
     }}))
     .pipe(sassGlob())
     .pipe(sass())
-    .pipe(prefix())
+    .pipe(prefix({browsers: ['last 4 versions']}))
     .pipe(gulp.dest('./css'));
 });
 
