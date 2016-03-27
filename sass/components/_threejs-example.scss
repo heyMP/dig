@@ -1,0 +1,18 @@
+#threejs-example {
+	height: 150vw;
+	width: 150vw;
+	margin: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-top: -30vw;
+	margin-right: -50vw;
+	margin-bottom: -50vw;
+	@include breakpoint($container-max-width) {
+		height: 100vw;
+		width: 100vw;
+		margin-top: -20vw;
+		margin-right: -33vw;
+		margin-bottom: -33vw;
+	}
+}

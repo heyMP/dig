@@ -1,0 +1,66 @@
+.glitch{
+  color:white;
+  font-size:20vw;
+  position:relative;
+  background: black;
+  display: table;
+  font-size: 50vw;
+  @include breakpoint($sitename-max-width) {
+    font-size: 30vw;
+  }
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+vw,9999px,random(100)+vw,0);
+    }
+  }
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:5px;
+  text-shadow:-4px 0 red;
+  top:0;
+  color:white;
+  overflow:hidden;
+  background: black;
+  clip:rect(0, 5vw,0,0);
+  margin: 0 auto;
+  animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+vw,9999px,random(100)+vw,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-5px;
+  text-shadow:4px 0 blue;
+  top:0;
+  color:white;
+  background: black;
+  overflow:hidden;
+  clip:rect(0, 5vw,0,0);
+  margin: 0 auto;
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch__bg {
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -3px;
+  margin-right: -3px;
+}
