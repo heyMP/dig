@@ -15,7 +15,7 @@ var typed = require('./typed.js');
   }
   else {
     $(document).ready(function() {
-      threejs_example();
+      // threejs_example();
       typed();
     });
   }
